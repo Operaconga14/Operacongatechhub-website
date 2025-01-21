@@ -12,12 +12,12 @@
                                         websites and offering expert training in full-stack development. Build your
                                         skills with our comprehensive courses or let us help you create a stunning
                                         online presence.</p>
-                                <a href=""
+                                <a [routerLink]="['/', 'about']"
                                         class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Learn
                                         More</a>
-                                <a [routerLink]="['/', 'signup']"
-                                        class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Get
-                                        Started</a>
+                                <a [routerLink]="['/', 'contact']"
+                                        class="btn btn-outline-dark py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact
+                                        Us</a>
                         </div>
                         <div class="col-lg-6 align-self-end text-center text-lg-end">
                                 <img class="img-fluid" src="img/hero-img.png" alt="OperaConga Tech Hub">
@@ -52,28 +52,31 @@
                                 </p>
                                 <div class="row g-3">
                                         <div class="col-sm-6">
-                                                <h6 class="mb-3"><i class="fa fa-check text-dark me-2"></i>Custom Web
+                                                <h6 class="mb-3"><i class="bi bi-check text-dark me-2"></i>Custom Web
                                                         Solutions</h6>
-                                                <h6 class="mb-0"><i class="fa fa-check text-dark me-2"></i>Expert
+                                                <h6 class="mb-0"><i class="bi bi-check text-dark me-2"></i>Expert
                                                         Full-Stack Courses</h6>
                                         </div>
                                         <div class="col-sm-6">
-                                                <h6 class="mb-3"><i class="fa fa-check text-dark me-2"></i>Experienced
+                                                <h6 class="mb-3"><i class="bi bi-check text-dark me-2"></i>Experienced
                                                         Trainers</h6>
-                                                <h6 class="mb-0"><i class="fa fa-check text-dark me-2"></i>Hands-on
+                                                <h6 class="mb-0"><i class="bi bi-check text-dark me-2"></i>Hands-on
                                                         Learning</h6>
                                         </div>
                                 </div>
                                 <div class="d-flex align-items-center mt-4">
-                                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
-                                        <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                                        class="bi bi-facebook"></i></a>
-                                        <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                                        class="bi bi-twitter"></i></a>
-                                        <a class="btn btn-outline-primary btn-square me-3" href=""><i
-                                                        class="bi bi-instagram"></i></a>
-                                        <a class="btn btn-outline-primary btn-square" href=""><i
-                                                        class="bi bi-linkedin"></i></a>
+                                        <a class="btn btn-primary rounded-pill px-4 me-3"
+                                                [routerLink]="['/', 'about']">Read More</a>
+                                        <div *ngIf="!socialUrl">
+                                                <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                                                class="bi bi-facebook"></i></a>
+                                                <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                                                class="bi bi-twitter"></i></a>
+                                                <a class="btn btn-outline-primary btn-square me-3" href=""><i
+                                                                class="bi bi-instagram"></i></a>
+                                                <a class="btn btn-outline-primary btn-square" href=""><i
+                                                                class="bi bi-linkedin"></i></a>
+                                        </div>
                                 </div>
                         </div>
                 </div>
@@ -92,7 +95,7 @@
                                         help businesses succeed online. We also provide professional full-stack
                                         development courses to equip individuals with the skills needed to thrive in the
                                         tech industry.</p>
-                                <a class="btn btn-primary rounded-pill px-4" href="">Learn More</a>
+                                <a class="btn btn-primary rounded-pill px-4" [routerLink]="['/', 'services']">Learn More</a>
                         </div>
                         <div class="col-lg-7">
                                 <div class="row g-4">
@@ -109,7 +112,7 @@
                                                                                 business needs, ensuring a seamless user
                                                                                 experience and excellent performance.
                                                                         </p>
-                                                                        <a class="btn px-3 mt-auto mx-auto" href="">Read
+                                                                        <a class="btn px-3 mt-auto mx-auto" [routerLink]="['/', 'services']">Read
                                                                                 More</a>
                                                                 </div>
                                                         </div>
@@ -125,7 +128,8 @@
                                                                                 hands-on learning, guiding you through
                                                                                 both frontend and backend development.
                                                                         </p>
-                                                                        <a class="btn px-3 mt-auto mx-auto" href="">Read
+                                                                        <a class="btn px-3 mt-auto mx-auto"
+                                                                                [routerLink]="['/', 'services']">Read
                                                                                 More</a>
                                                                 </div>
                                                         </div>
@@ -145,7 +149,7 @@
                                                                                 guidance, helping you overcome
                                                                                 challenges and excel in web development.
                                                                         </p>
-                                                                        <a class="btn px-3 mt-auto mx-auto" href="">Read
+                                                                        <a class="btn px-3 mt-auto mx-auto" [routerLink]="['/', 'services']">Read
                                                                                 More</a>
                                                                 </div>
                                                         </div>
@@ -161,7 +165,7 @@
                                                                                 interactive learning experiences,
                                                                                 ensuring you understand and apply key
                                                                                 concepts effectively.</p>
-                                                                        <a class="btn px-3 mt-auto mx-auto" href="">Read
+                                                                        <a class="btn px-3 mt-auto mx-auto" [routerLink]="['/', 'services']">Read
                                                                                 More</a>
                                                                 </div>
                                                         </div>
@@ -211,7 +215,7 @@
                                                         style="background: rgba(256, 256, 256, 0.1);">
                                                         <i class="fa fa-users fa-3x text-dark"></i>
                                                         <div class="ms-3">
-                                                                <h2 class="text-dark mb-0" data-toggle="counter-up">500+
+                                                                <h2 class="text-dark mb-0" data-toggle="counter-up">{{happyClient}}
                                                                 </h2>
                                                                 <p class="text-dark mb-0">Happy Clients</p>
                                                         </div>
@@ -222,7 +226,7 @@
                                                         style="background: rgba(256, 256, 256, 0.1);">
                                                         <i class="fa fa-check fa-3x text-dark"></i>
                                                         <div class="ms-3">
-                                                                <h2 class="text-dark mb-0" data-toggle="counter-up">300+
+                                                                <h2 class="text-dark mb-0" data-toggle="counter-up">{{projectCompleted}}
                                                                 </h2>
                                                                 <p class="text-dark mb-0">Projects Completed</p>
                                                         </div>
@@ -535,11 +539,11 @@
                                 <div class="btn btn-sm border rounded-pill text-dark px-3 mb-3">Stay Updated</div>
                                 <h1 class="text-dark mb-4">Subscribe to Our Newsletter</h1>
                                 <div class="position-relative w-100 mt-3 mb-2">
-                                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                        <input class="form-control border-1 rounded-pill w-100 ps-4 pe-5" type="text"
                                                 placeholder="Enter Your Email" style="height: 48px;">
                                         <button type="button"
-                                                class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
-                                                <i class="fa fa-paper-plane text-dark fs-4"></i>
+                                                class="btn shadow-none text-dark position-absolute top-0 end-0 mt-0 me-2">
+                                                <i class="bi bi-send text-dark fs-4"></i>
                                         </button>
                                 </div>
                                 <small class="text-dark-50">Get the latest news, updates, and offers directly to your

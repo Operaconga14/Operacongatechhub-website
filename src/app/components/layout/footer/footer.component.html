@@ -15,9 +15,9 @@
                         </div>
                         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                                 <h5 class="text-white mb-4">Get In Touch</h5>
-                                <p><i class="bi bi-map me-3"></i>789 Digital Avenue, Tech Valley, USA</p>
-                                <p><i class="bi bi-telephone me-3"></i>+123 987 65432</p>
-                                <p><i class="bi bi-envelope me-3"></i>contact&#64;operaconga.com</p>
+                                <p><i class="bi bi-map me-3"></i>84 Power Line Yusuf Kola, Lagos</p>
+                                <p><i class="bi bi-telephone me-3"></i>+234 8140153436</p>
+                                <p><i class="bi bi-envelope me-3"></i>amirejoseph83&#64;gmail.com</p>
                                 <div class="d-flex pt-2">
                                         <a class="btn btn-outline-light btn-social" href=""><i
                                                         class="bi bi-twitter text-primary"></i></a>
@@ -33,11 +33,11 @@
                         </div>
                         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                                 <h5 class="text-white mb-4">Quick Links</h5>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms of Service</a>
-                                <a class="btn btn-link" href="">Careers</a>
+                                <a class="btn btn-link" [routerLink]="['/', 'about']">About Us</a>
+                                <a class="btn btn-link" [routerLink]="['/', 'contact']">Contact Us</a>
+                                <a class="btn btn-link" [routerLink]="['/', '']">Privacy Policy</a>
+                                <a class="btn btn-link" [routerLink]="['/', '']">Terms of Service</a>
+                                <a class="btn btn-link" [routerLink]="['/', '']">Careers</a>
                         </div>
                         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                                 <h5 class="text-white mb-4">Our Expertise</h5>
@@ -60,10 +60,10 @@
                                 </div>
                                 <div class="col-md-6 text-center text-md-end">
                                         <div class="footer-menu">
-                                                <a href="">Home</a>
-                                                <a href="">Cookies</a>
-                                                <a href="">Help</a>
-                                                <a href="">FAQs</a>
+                                                <a [routerLink]="['']">Home</a>
+                                                <a [routerLink]="['/', '']">Cookies</a>
+                                                <a [routerLink]="['/', '']">Help</a>
+                                                <a [routerLink]="['/', '']">FAQs</a>
                                         </div>
                                 </div>
                         </div>
