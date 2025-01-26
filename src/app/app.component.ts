@@ -1,31 +1,38 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgxSpinnerService } from "ngx-spinner";
+import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 import { DefaultLayoutComponent } from "./components/layout/default-layout/default-layout.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DefaultLayoutComponent],
+  imports: [DefaultLayoutComponent, NgxSpinnerModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Operaconga Tech Hub';
+  isvisible = false;
 
   titleService = inject(Title);
   metaService = inject(Meta);
   ativatedRouter = inject(ActivatedRoute);
   router = inject(Router);
   spinnerService = inject(NgxSpinnerService);
-  layoutVisible = false;
 
   ngOnInit(): void {
     // Default title and meta description
     if (typeof window !== 'undefined') {
       this.setMetaTags();
     }
+
+    this.spinnerService.show();
+
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 8000);
   }
 
   setMetaTags() {

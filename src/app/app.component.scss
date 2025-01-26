@@ -1,0 +1,16 @@
+@keyframes rotateText {
+        0% {
+                transform: rotate(0deg);
+        }
+
+        100% {
+                transform: rotate(360deg);
+        }
+}
+
+.text-primary {
+        display: inline-block;
+        /* Ensure the text is inline and can rotate */
+        animation: rotateText 2s linear infinite;
+        /* Apply rotation with a 2-second duration, infinitely rotating */
+}
