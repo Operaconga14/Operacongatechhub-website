@@ -1,5 +1,8 @@
 # OperacongatechhubWebsite
 
+website has been moved to neylify
+https://operacongatechhub.netlify.app
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
 ## Development server
